@@ -17,3 +17,9 @@ a:hover {
     color: wheat !important;
     background-color: #5c6b8d !important;
  }
+ .carrito{
+   width: 40px;
+   background-color: transparent;
+   border: none;
+   margin-right:20px ;
+ }

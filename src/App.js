@@ -7,8 +7,9 @@ function App() {
   return (
     <>
     <NavBar/>
+    <ItemListContainer greeting={"BlueButterfly"}/>
     <div className="App">    
-      <ItemListContainer greeting={"BlueButterfly"}/>
+     
       <div className="ofertas">
         <Card/> <Card/> <Card/> <Card/>
       </div>
