@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.App{
+    background-color: rgb(250, 243, 237);
+    margin-top: -100px;
+}
+.tituloPrincipal{
+    text-align: center;
+    margin: auto;
+    margin: 100px; 
+    padding-top: 50px;
+}
+.ofertas{
+
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0073ff02;
+}

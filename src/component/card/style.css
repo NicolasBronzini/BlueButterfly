@@ -1,0 +1,8 @@
+.CardOfertas{
+    margin: 300px 20px ;
+
+}
+.precio{
+    display: flex;
+    justify-content: space-around;
+}
