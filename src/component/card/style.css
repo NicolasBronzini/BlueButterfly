@@ -6,3 +6,9 @@
     display: flex;
     justify-content: space-around;
 }
+.botonCard{
+    width: max-content;
+    display: flex;
+    height: 50px;
+    color: black;
+}

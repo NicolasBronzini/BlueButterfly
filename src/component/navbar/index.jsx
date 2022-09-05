@@ -1,13 +1,16 @@
 
 import Container from 'react-bootstrap/Container';
-
+import BotonCount from './ItemCount/ItemCount'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import carrito from '../assets/carrito.png'
+
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './style.css';
 
+
+
 function OffcanvasExample() {
+
   return (
     <>
       {[false,].map((expand) => (
@@ -15,10 +18,14 @@ function OffcanvasExample() {
           <Container fluid >
             <Navbar.Brand href="#" className='titulo'>BlueButterfly</Navbar.Brand>
             <div>
-              <button className='carrito'><img src={carrito}/></button>
-              <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  className='boton_1'/>
-          
-              <Navbar.Offcanvas
+              <div className='botones'>
+                <div  className='bnt_carrito'>
+                  <BotonCount/>
+                </div>
+                 
+                <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  className='boton_1'/>
+              </div>
+               <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"

@@ -1,0 +1,26 @@
+.carrito{
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    margin-right:40px ;
+    display: inline-flex;
+    height: 20px;
+  }
+  .BotonCount{
+    display: block;
+  }
+  .Contador{
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+  }
+.Contador button{
+    border-radius: 50%;
+    width: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 0, 0.423);
+    color: white;
+}
+.Contador button:hover{
+    background-color:rgba(80, 80, 9, 0.36) ;
+}
