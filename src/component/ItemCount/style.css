@@ -11,15 +11,17 @@
   }
   .Contador{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 20px;
+ 
     height: 30px;
   }
 .Contador button{
     border-radius: 50%;
     width: 30px;
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 0, 0.423);
-    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    color: black;
 }
 .Contador button:hover{
     background-color:rgba(80, 80, 9, 0.36) ;

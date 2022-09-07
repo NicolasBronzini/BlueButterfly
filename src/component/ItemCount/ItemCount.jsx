@@ -1,5 +1,5 @@
 import './style.css';
-import carrito from '../../assets/carrito.png'
+import carrito from './../assets/carrito.png'
 import { useState } from 'react';
 
 
@@ -7,13 +7,16 @@ import { useState } from 'react';
 function BotonCount() {
     let [cantidad, setCantidad] = useState(0);  
 let eventoClick = (e) => {
-  setCantidad(cantidad + 1)
+  if(cantidad < 4){
+     setCantidad(cantidad + 1)
+  }
+ 
+  
 }
 let eventoClick2 = (e) => {
     if( cantidad > 0){
         setCantidad(cantidad - 1)
     }
-    
     else  {
        cantidad = 0
     }

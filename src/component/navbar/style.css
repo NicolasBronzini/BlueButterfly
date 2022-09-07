@@ -25,3 +25,11 @@ a:hover {
  .bnt_carrito{
    margin-right: 20px;
  }
+ .carrito{
+   width: 30px;
+   background-color: transparent;
+   border: none;
+   margin-right:40px ;
+   display: inline-flex;
+   height: 20px;
+ }

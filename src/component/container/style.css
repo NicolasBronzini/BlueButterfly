@@ -1,4 +1,6 @@
 .h1_principal{
     text-align: center;
     color: black;
+    margin-top: -25px;
+    background-color: rgb(250, 243, 237);
 }
