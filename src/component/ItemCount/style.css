@@ -12,7 +12,7 @@
   .Contador{
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin-top: 5px;
  
     height: 30px;
   }
@@ -20,9 +20,9 @@
     border-radius: 50%;
     width: 30px;
     background-color: transparent;
-    border: 1px solid rgb(0, 0, 0);
-    color: black;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
 }
 .Contador button:hover{
-    background-color:rgba(80, 80, 9, 0.36) ;
+    background-color:rgba(138, 138, 10, 0.36) ;
 }

@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import carrito from './../assets/carrito.png'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import BotonCount from '../ItemCount/ItemCount'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './style.css';
 
@@ -19,8 +19,7 @@ function OffcanvasExample() {
             <Navbar.Brand href="#" className='titulo'>BlueButterfly</Navbar.Brand>
             <div>
               <div className='botones'>
-               
-                <button className='carrito'><img src={carrito}/> </button>
+              <BotonCount/>        
                 <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  className='boton_1'/>
               </div>
                <Navbar.Offcanvas

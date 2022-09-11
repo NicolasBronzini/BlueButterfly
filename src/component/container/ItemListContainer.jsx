@@ -1,13 +1,38 @@
-import React from 'react'
-import BotonCount from '../ItemCount/ItemCount'
+import React, { useEffect, useState } from 'react'
+import { products } from '../data/productos';
+import ItemList from '../ItemList';
+
 import './style.css';
 const ItemListContainer=({greeting}) => {
-  return (
-    <div className='h1_principal'>
-        <h1>{greeting}</h1>
-        <BotonCount/>
-    </div>
-  )
-}
+
+const [productos, setProductos] = useState ([])
+
+useEffect (()=> {
+  
+  ( async ()=> {
+  let traerProductos = new Promise ((accept , reject )=>{
+    setTimeout (() => {
+      accept(products)
+    }, 2000)
+  })
+
+    try {
+      const productos = await traerProductos;
+      setProductos(productos);
+    } catch (error) {
+      
+    }
+  })()
+},[])
+  console.log (productos)
+    return (
+      <div className='h1_principal'>
+          <h1>{greeting}</h1>
+          <ItemList products={productos}/>
+      </div>
+    )
+  }
+
+
 
 export default ItemListContainer

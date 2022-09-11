@@ -1,5 +1,6 @@
 .CardOfertas{
     margin: 300px 20px ;
+    display: flex;
 
 }
 .precio{
