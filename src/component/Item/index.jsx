@@ -8,9 +8,9 @@ import './style.css';
 
 const Item = ({product}) => {
   return (
-  <Card style={{ width: '18rem' }} className='CardOfertas'>
+  <Card  className='CardOfertas'>
     <Card.Img variant="top" src={product.image} />
-    <Card.Body>
+    <Card.Body  className='Cardbody'>
       <Card.Title>{product. title}</Card.Title>
       <Card.Text>
       {product. description}

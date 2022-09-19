@@ -1,4 +1,9 @@
 .ItemCard{
-    display: flex !important;
-    justify-content: space-around !important;
+   width: 100%;
+      
+   
+   margin: 50px;
+   height:auto;
+   border: solid 3px black ;
+   
 }

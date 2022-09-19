@@ -1,6 +1,10 @@
 .CardOfertas{
-   width: fit-content;
-
+    width: 400px;
+    height: auto;
+   margin: 50px;
+}
+.CardBody{
+   font-size: 1.3rem !important;
 }
 .precio{
     display: flex;

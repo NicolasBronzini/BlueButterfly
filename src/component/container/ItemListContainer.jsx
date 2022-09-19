@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // import { products } from '../data/productos';
 import ItemList from '../ItemList';
-
 import './style.css';
 const ItemListContainer=({greeting}) => {
 
@@ -30,12 +29,12 @@ useEffect (()=> {
       <>
       <div className='h1_principal'>
           <h1>{greeting}</h1>
-      
+       </div>
         <div className='cardProductos'>
-          <ItemList products={productos} className='itemCard'/>
+          <ItemList products={productos} />
        </div>
           
-      </div>
+     
       </>
     )
   }
