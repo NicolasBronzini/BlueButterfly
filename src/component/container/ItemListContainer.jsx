@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { products } from '../data/productos';
+// import { products } from '../data/productos';
 import ItemList from '../ItemList';
 
 import './style.css';
@@ -10,14 +10,15 @@ const [productos, setProductos] = useState ([])
 useEffect (()=> {
   
   ( async ()=> {
-  let traerProductos = new Promise ((accept , reject )=>{
-    setTimeout (() => {
-      accept(products)
-    }, 2000)
-  })
+  // let traerProductos = new Promise ((accept , reject )=>{
+  //   setTimeout (() => {
+  //     accept(products)
+  //   }, 2000)
+  // })
 
     try {
-      const productos = await traerProductos;
+      const response = await fetch('https://Fakestoreapi.com/products');
+      const productos = await response.json();
       setProductos(productos);
     } catch (error) {
       
@@ -26,10 +27,16 @@ useEffect (()=> {
 },[])
   console.log (productos)
     return (
+      <>
       <div className='h1_principal'>
           <h1>{greeting}</h1>
-          <ItemList products={productos}/>
+      
+        <div className='cardProductos'>
+          <ItemList products={productos} className='itemCard'/>
+       </div>
+          
       </div>
+      </>
     )
   }
 
