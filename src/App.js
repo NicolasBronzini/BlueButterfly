@@ -6,14 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './component/ItemDetailContainer';
 
 import React from "react";
-import { createRoot } from "react-dom/client";
+
 import {
-  createBrowserRouter,
+
   Routes,
   Route,
-  Link,
+ 
   BrowserRouter,
 } from "react-router-dom";
+import NotFound from './component/NotFound';
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
        </div>
        <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/category/:categoryId' element ={<ItemListContainer/>}/>
+          <Route path='/detail/:productId' element={<ItemListContainer/>}/>
+        <Route path='*' element={<NotFound></NotFound>}/>
        </Routes>
 
     </BrowserRouter>

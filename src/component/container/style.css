@@ -1,13 +1,14 @@
-/* .h1_principal{
+ .h1_principal{
     text-align: center;
     color: black;
     margin-top: -25px;
     padding-top: 100px;
     background-color: rgb(250, 243, 237);
-} */
+} 
 .cardProductos{
-
+   background-color: rgb(250, 243, 237);
     width: 100%;
     justify-content: center;
+    margin-top: -50px;
 }
 

@@ -1,44 +1,39 @@
-import React, { useEffect, useState } from 'react'
-// import { products } from '../data/productos';
-import ItemList from '../ItemList';
-import './style.css';
-const ItemListContainer=({greeting}) => {
+import React, { useEffect, useState } from "react";
+// import { products } from '../../data/products';
+import ItemList from "../ItemList";
+import {useParams} from 'react-router-dom';
 
-const [productos, setProductos] = useState ([])
+const ItemListContainer = ({ greeting }) => {
+    const [productos, setProductos] = useState([]);
 
-useEffect (()=> {
-  
-  ( async ()=> {
-  // let traerProductos = new Promise ((accept , reject )=>{
-  //   setTimeout (() => {
-  //     accept(products)
-  //   }, 2000)
-  // })
+    const {categoryId} = useParams();
 
-    try {
-      const response = await fetch('https://Fakestoreapi.com/products');
-      const productos = await response.json();
-      setProductos(productos);
-    } catch (error) {
-      
-    }
-  })()
-},[])
-  console.log (productos)
-    return (
-      <>
-      <div className='h1_principal'>
-          <h1>{greeting}</h1>
-       </div>
-        <div className='cardProductos'>
-          <ItemList products={productos} />
-       </div>
-          
-     
-      </>
-    )
-  }
+    console.log(categoryId);
 
+    useEffect(() => {
+        (async () => {
+            try {
+                if (categoryId){
+                  const response = await fetch(
+                    "https://fakestoreapi.com/products/category/" + categoryId
+                );
+                const productos = await response.json();
+                setProductos(productos);
+                }
+                else {
+                  const response = await fetch(
+                      "https://fakestoreapi.com/products"
+                  );
+                  const productos = await response.json();
+                  setProductos(productos);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        })();
+    }, [categoryId]);
 
+    return <ItemList products={productos} />;
+};
 
-export default ItemListContainer
+export default ItemListContainer;

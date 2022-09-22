@@ -1,9 +1,9 @@
 .ItemCard{
-   width: 100%;
-      
-   
+   background-color: rgb(250, 243, 237);
+   flex-wrap: wrap;
+   display: flex;
    margin: 50px;
    height:auto;
-   border: solid 3px black ;
+    
    
 }

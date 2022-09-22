@@ -1,38 +1,58 @@
+import React, {useState, useEffect} from "react";
+import carrito from '../assets/carrito.png'
 import './style.css';
-import carrito from './../assets/carrito.png'
-import { useState } from 'react';
 
+const ItemCount = ({stock, initial, onAdd}) => {
 
+    const [count, setCount] = useState(initial);
 
-function BotonCount() {
-    let [cantidad, setCantidad] = useState(0);  
-let eventoClick = (e) => {
-  if(cantidad < 4){
-     setCantidad(cantidad + 1)
-  }
- 
-  
-}
-let eventoClick2 = (e) => {
-    if( cantidad > 0){
-        setCantidad(cantidad - 1)
+    const handleAdd = () => {
+        if(count < stock) {
+            setCount(count+1);
+        } else {
+            alert("No hay suficiente stock disponible");
+        }
     }
-    else  {
-       cantidad = 0
+
+    const handleDecrement = () => {
+       if (count > 0){
+        setCount(count  - 1)
+       }
     }
-}  
-  return (
-    <>
-        <div className='BotonCount'>
-            <button className='carrito'>{cantidad}<img src={carrito}/> </button>
-            <div className='Contador'>
-                <button  onClick={eventoClick}>+</button> <button  onClick={eventoClick2}>-</button>
+
+    const addCart = () => {
+        onAdd(count);
+        setCount(initial);
+    }
+
+   
+    useEffect(()=> {
+       
+    }, []);
+
+   
+    useEffect(()=> {
+        console.log("Se actualiza el estado!")
+    }, [count]);
+
+    return (
+    
+      <div className='BotonCount'>
+               <button className='carrito'>{count}<img src={carrito} alt='carrit de compras'/> </button>
+            <div>
+              <div  className='Contador'>
+                 <button onClick={handleAdd}>+</button> <button onClick={handleDecrement}>-</button>
+              </div>
+              <div >
+              <button onClick={addCart} className="btn_carrito">Agregar al carrito</button>
+              </div>
             </div>    
-        </div>
-    </>
-  );
-}
+      </div>
+    );
+};
 
-export default BotonCount;
+export default ItemCount;
+
+
 
  

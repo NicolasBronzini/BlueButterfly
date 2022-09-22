@@ -1,12 +1,13 @@
 
 import Container from 'react-bootstrap/Container';
-import carrito from './../assets/carrito.png'
+import carrito from '../assets/carrito.png'
+import count from '../ItemCount/ItemCount'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import BotonCount from '../ItemCount/ItemCount'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './style.css';
-
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 
 function OffcanvasExample() {
@@ -19,7 +20,7 @@ function OffcanvasExample() {
             <Navbar.Brand href="#" className='titulo'>BlueButterfly</Navbar.Brand>
             <div>
               <div className='botones'>
-              <BotonCount/>        
+              <button className='carrito'>{count}<img src={carrito} alt='carrit de compras'/></button>        
                 <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  className='boton_1'/>
               </div>
                <Navbar.Offcanvas
@@ -34,15 +35,25 @@ function OffcanvasExample() {
                 </Offcanvas.Header>
                 <Offcanvas.Body className='links-barra'>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="#action1">Home</Nav.Link>
-                    <Nav.Link href="#action2">Productos</Nav.Link>
+                    <Nav.Link href='/'>Home</Nav.Link>
+                    <NavDropdown
+                    title="Categoria"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item > <Link to="/category/men's clothing"> men`s clothing</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to="/category/women's clothing"> Women`s clothing</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to="/category/electronics"> Electronics</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to="/category/jewelery"> Jewlery</Link></NavDropdown.Item>
+
+                  </NavDropdown>
                     <Nav.Link href="#action2">Nosotros</Nav.Link>
                     <Nav.Link href="#action2">Contacto</Nav.Link>
                   </Nav>
-                
+                  
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
             </div>
+           
           </Container>
         </Navbar>
       ))}
