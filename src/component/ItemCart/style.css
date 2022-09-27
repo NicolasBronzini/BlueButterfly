@@ -1,0 +1,31 @@
+.cartContainer{
+    width: 100%;
+    background-color: #1C3879;
+    margin: 20px;
+    margin-left: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+    border-radius: 5px;
+}
+.img-cart{
+    width: 130px;
+    height: 130px;
+    margin-right: 50px;
+}
+.titulo-cart{
+    margin-top: 50px;
+}
+.precio{
+    margin-top: 50px;
+}
+.cantidad{
+    margin-top: 50px;
+}
+.btn-quitar{
+     margin-top: 50px;
+     background-color: transparent;
+     border: none;
+   
+}

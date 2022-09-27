@@ -1,23 +1,26 @@
 import React from 'react'
 import { useContext } from 'react';
 import { Shop } from '../Context/CartContext';
-import styles from './style.css';
-
+import  './style.css';
+import { FaTimes } from "react-icons/fa";
 const ItemCart = ({product}) => {
 
   const {removeItem} = useContext(Shop);
-
+  
   return (
-    <div className={styles.cartContent}>
-      <img className={styles.productImage} width="130px" height="130px" src={product.image} alt=""/>
-      <dl className={styles.title}>
+    <div className="cartContainer">
+      <img className='img-cart' src={product.image} alt=""/>
+      <dl className="titulo-cart">
         <dt>{product.title}</dt>
       </dl>
-      <dl className={styles.price}>
-        <dt>{product.price}€</dt>
+      <dl className="precio">
+        <dt>{product.price}$</dt>
       </dl>
-      <dl className={styles.quantity}>
+      <dl className="cantidad">
         <dt>{product.quantity}</dt>
+      </dl>
+      <dl>
+        <button onClick={removeItem} className='btn-quitar'><FaTimes /></button>
       </dl>
     </div>
   )

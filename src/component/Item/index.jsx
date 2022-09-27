@@ -1,8 +1,9 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
+  
 import Card from 'react-bootstrap/Card';
-import carrito from '../assets/carrito.png'
+
 import { useNavigate } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
 import './style.css';
 
 
@@ -22,8 +23,8 @@ const Item = ({product}) => {
       {product.description}
       </Card.Text>
       <div className='precio'>
-        <Button variant="primary" className='botonCard'> <img src={carrito} width='30px' alt='carrito'/></Button>
-        <h3>{product.price}</h3>
+        <ItemCount initial={1} stock={product.stock} /*onAdd={agregarCarrito}*//>
+        <h3>{product.price}$</h3>
       </div>
     </Card.Body>
   </Card>

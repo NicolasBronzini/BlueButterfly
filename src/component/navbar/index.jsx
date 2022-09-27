@@ -1,13 +1,13 @@
 
 import Container from 'react-bootstrap/Container';
-import carrito from '../assets/carrito.png'
-import count from '../ItemCount/ItemCount'
+
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './style.css';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import CartWidget from "../CardWidget"
 
 
 function OffcanvasExample() {
@@ -20,7 +20,7 @@ function OffcanvasExample() {
             <Navbar.Brand href="/" className='titulo'>BlueButterfly</Navbar.Brand>
             <div>
               <div className='botones'>
-              <button className='carrito'>{count}<img src={carrito} alt='carrit de compras'/></button>        
+           <Link to="/cart"><CartWidget/></Link>
                 <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  className='boton_1'/>
               </div>
                <Navbar.Offcanvas

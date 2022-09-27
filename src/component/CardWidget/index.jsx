@@ -1,11 +1,15 @@
 import React from 'react';
-import {FaShoppingCart} from 'react-icons/fa'
+import carrito from '../assets/carrito.png'
+import './style.css'
 
 const CartWidget = () => {
   return (
-    <div>
-      <FaShoppingCart/>
+    <>
+    <div style={{ position: 'absolute',right: '80px',  top: '5px',}}>
+        <img src={carrito} alt="carrito de compras" />
     </div>
+
+    </>
   )
 }
 

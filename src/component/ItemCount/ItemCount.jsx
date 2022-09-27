@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, {useState,} from "react";
 import carrito from '../assets/carrito.png'
 import './style.css';
 
 const ItemCount = ({stock, initial, onAdd}) => {
-
+    
     const [count, setCount] = useState(initial);
 
     const handleAdd = () => {
