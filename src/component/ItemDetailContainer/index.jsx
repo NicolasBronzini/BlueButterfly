@@ -10,12 +10,14 @@ const ItemDetailContainer = () => {
     console.log(productId);
     
  
+    setTimeout(
     useEffect(()=> {
-
+        
+          
+        
         const getProducts = async () => {
             try {
-              
-                const response = await fetch(`https://fakestoreapi.com/products/ ${productId}`);
+                const response = await fetch(`https://fakestoreapi.com/products/+${productId}`);
                 const data = await response.json();
                 setProductDetail(data);
             } catch (error) {
@@ -24,7 +26,7 @@ const ItemDetailContainer = () => {
         }
         getProducts();
 
-    }, [productId])
+    }, [productId]),2000)
 
     console.log(productDetail);
 

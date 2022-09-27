@@ -10,7 +10,7 @@ const Item = ({product}) => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate (`/detail/ ${product.id}`);
+    navigate (`/detail/${product.id}`);
   }
 
   return (
@@ -22,7 +22,7 @@ const Item = ({product}) => {
       {product.description}
       </Card.Text>
       <div className='precio'>
-        <Button variant="primary" className='botonCard'> <img src={carrito} width='30px'/></Button>
+        <Button variant="primary" className='botonCard'> <img src={carrito} width='30px' alt='carrito'/></Button>
         <h3>{product.price}</h3>
       </div>
     </Card.Body>

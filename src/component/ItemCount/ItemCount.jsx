@@ -26,14 +26,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
 
    
-    useEffect(()=> {
-       
-    }, []);
-
-   
-    useEffect(()=> {
-        console.log("Se actualiza el estado!")
-    }, [count]);
+    
 
     return (
     

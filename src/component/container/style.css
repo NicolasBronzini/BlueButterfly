@@ -6,9 +6,10 @@
     background-color: rgb(250, 243, 237);
 } 
 .cardProductos{
-   background-color: rgb(250, 243, 237);
+  
     width: 100%;
     justify-content: center;
     margin-top: -50px;
+    margin: -100px;
 }
 
