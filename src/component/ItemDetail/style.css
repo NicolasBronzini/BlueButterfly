@@ -23,3 +23,22 @@
 .precio{
     margin-bottom: 50px;
 }
+.btn_carrito{
+    background-color: rgba(7, 77, 7, 0.664);
+    border: none;
+    border-radius: 3px;
+    margin: 20px;
+    padding: 10px;
+  }
+@media (max-width: 1000px){
+    .containerDetail{
+        display: block;
+       
+    }
+    .img-detail{
+        max-width: 500px;
+        width: 100%;
+        
+        
+    }
+}

@@ -21,13 +21,32 @@
     width:auto;
     height: 300px;
 }
+
 .precio{
     display: flex;
     justify-content: space-around;
 }
 .botonCard{
     width: max-content;
-    display: flex;
+   
     height: 50px;
     color: black;
+}
+.botonVer{
+    background-color: rgb(1, 124, 48);
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+@media (max-width: 600px) {
+    .CardOfertas{
+        width: 100%;
+        padding: 20px !important;
+    }
+    .card-img{
+        max-height: 300px;
+        width: auto;
+    }
+    
 }

@@ -3,7 +3,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 
 import { useNavigate } from 'react-router-dom';
-import ItemCount from '../ItemCount/ItemCount';
+// import ItemCount from '../ItemCount/ItemCount';
 import './style.css';
 
 
@@ -19,11 +19,11 @@ const Item = ({product}) => {
     <Card.Img variant="top" src={product.image} className='card-img' />
     <Card.Body  className='Cardbody'>
       <Card.Title>{product.title}</Card.Title>
-      <Card.Text>
-      {product.description}
+      <Card.Text >
+      {product.description } 
       </Card.Text>
       <div className='precio'>
-        <ItemCount initial={1} stock={product.stock} /*onAdd={agregarCarrito}*//>
+       <button className='botonVer'>Ver</button>
         <h3>{product.price}$</h3>
       </div>
     </Card.Body>

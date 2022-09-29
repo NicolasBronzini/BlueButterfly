@@ -4,9 +4,15 @@ import { Shop } from '../Context/CartContext';
 import  './style.css';
 import { FaTimes } from "react-icons/fa";
 const ItemCart = ({product}) => {
-
   const {removeItem} = useContext(Shop);
-  
+  const {cart} = useContext(Shop);
+
+  const productsInCart = [];
+
+  cart.forEach(item => {
+    productsInCart.push(item);
+  });
+
   return (
     <div className="cartContainer">
       <img className='img-cart' src={product.image} alt=""/>
@@ -16,11 +22,11 @@ const ItemCart = ({product}) => {
       <dl className="precio">
         <dt>{product.price}$</dt>
       </dl>
-      <dl className="cantidad">
-        <dt>{product.quantity}</dt>
-      </dl>
+      <div className="cantidad">
+        <dt>{product.quantity} Cantidad</dt>
+      </div>
       <dl>
-        <button onClick={removeItem} className='btn-quitar'><FaTimes /></button>
+        <button onClick={() => removeItem (product.id)} className='btn-quitar'><FaTimes /></button>
       </dl>
     </div>
   )

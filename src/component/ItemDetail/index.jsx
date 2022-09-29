@@ -33,7 +33,7 @@ const ItemDetail = ({ product }) => {
                 <h1>{product.title}</h1>
                 <p>{product.description}</p>
                 <h2 className="precio">{product.price} $</h2>
-                {qty ?  <button onClick={handleFinish}></button> : <ItemCount stock={10} initial={1} onAdd={toCart} /> }
+                {qty ?  <button onClick={handleFinish} className="btn_carrito">Agregar al carrito</button> : <ItemCount stock={10} initial={1} onAdd={toCart} onClick={handleFinish}/> }
             </div>
         </div>
     );
