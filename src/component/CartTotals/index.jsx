@@ -1,14 +1,14 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Shop } from '../context/CartContext';
-import 'stylecss';
+import { Shop } from '../Context/CartContext';
+import './style.css';
 
 const CartTotals = () => {
 
   const {totalPrice} = useContext(Shop);
 
   return (
-    <aside className={styles.cartTotals}>
+    <aside >
       <p>total: {totalPrice().toFixed(2)}€</p>
     </aside>
   )
