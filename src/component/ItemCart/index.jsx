@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { Shop } from '../Context/CartContext';
 import  './style.css';
 import { FaTimes } from "react-icons/fa";
+
 const ItemCart = ({product}) => {
   const {removeItem} = useContext(Shop);
   const {cart} = useContext(Shop);
@@ -20,13 +21,13 @@ const ItemCart = ({product}) => {
         <dt>{product.title}</dt>
       </dl>
       <dl className="precio">
-        <dt>{product.price}$</dt>
+        <dt>{product.price * product.quantity}$</dt>
       </dl>
       <div className="cantidad">
         <dt>{product.quantity} Cantidad</dt>
       </div>
       <dl>
-        <button onClick={() => removeItem (product.id)} className='btn-quitar'><FaTimes /></button>
+        <button onClick={()=> removeItem(product)}  className='btn-quitar'><FaTimes /></button>
       </dl>
     </div>
   )

@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import {Shop} from '../Context/CartContext'
 import "./style.css";
 
+
 const ItemDetail = ({ product }) => {
     const [qty, setQty] = useState(0);
     const navigate = useNavigate();
@@ -33,7 +34,7 @@ const ItemDetail = ({ product }) => {
                 <h1>{product.title}</h1>
                 <p>{product.description}</p>
                 <h2 className="precio">{product.price} $</h2>
-                {qty ?  <button onClick={handleFinish} className="btn_carrito">Agregar al carrito</button> : <ItemCount stock={10} initial={1} onAdd={toCart} onClick={handleFinish}/> }
+                {qty ?  <button onClick={handleFinish} className="btn_carrito">Terminar mi compra</button> : <ItemCount stock={10} initial={1} onAdd={toCart} onClick={handleFinish}/> }
             </div>
         </div>
     );

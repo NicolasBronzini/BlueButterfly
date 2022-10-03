@@ -36,7 +36,7 @@ const CartContext = ({children}) => {
 
 
   const removeItem = (itemRemove) => {
-    const removedCart = cart.filter(product => product.id !== itemRemove);
+    const removedCart = cart.filter(product => product !== itemRemove);
     setCart(removedCart); 
   }
 

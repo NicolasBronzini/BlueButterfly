@@ -6,11 +6,12 @@
     background-color: rgb(255, 255, 255);
     width: 80%;
     width: auto;
+    margin-bottom: 100px;
 }
 .img-detail{
     width: 500px;
     margin: auto;
- 
+    
 }
 .detail-subcontainer{
     height: 100%;

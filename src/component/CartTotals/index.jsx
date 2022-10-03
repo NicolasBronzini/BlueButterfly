@@ -9,7 +9,7 @@ const CartTotals = () => {
 
   return (
     <aside >
-      <p>total: {totalPrice().toFixed(2)}€</p>
+      <p>total: {totalPrice().toFixed(2)}$</p>
     </aside>
   )
 }

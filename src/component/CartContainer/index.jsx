@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ItemCart from '../ItemCart';
 import { Shop } from '../Context/CartContext';
-
+import CartTotals from '../CartTotals';
 import './style.css';
 
 const CartContainer = () => {
@@ -28,9 +28,7 @@ const CartContainer = () => {
         })}
         <button onClick={clearCart} className='btnClear'> Clear</button>
       </section>
-      <aside >
-
-      </aside>
+      <CartTotals/>
       
     </div>
     </>

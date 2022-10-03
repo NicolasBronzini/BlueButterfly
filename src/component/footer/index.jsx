@@ -6,7 +6,7 @@ export const footer = () => {
     <>
         <div className='footerContainer'>
             <div>
-                <h3>Unete a nosotros</h3>
+                <h3>¡Únete a nosotros!</h3>
                 <p>Puedes encontrarnos aqui o sino en nuestras redes sociales y ser parte de esta gran familia. <br />
                     Ya sabes como dicen, comprar es poder o algo asi ....
                 </p>

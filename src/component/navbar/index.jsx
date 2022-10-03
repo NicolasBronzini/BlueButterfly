@@ -40,9 +40,9 @@ function OffcanvasExample() {
                     title="Categoria"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item > <Link to="/category/men's clothing"> men`s clothing</Link></NavDropdown.Item>
-                    <NavDropdown.Item ><Link to="/category/women's clothing"> Women`s clothing</Link></NavDropdown.Item>
-                    <NavDropdown.Item ><Link to="/category/electronics"> Electronics</Link></NavDropdown.Item>
+                    <NavDropdown.Item > <Link to="/category/Electrodomesticos"> Electrodomesticos</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to="/category/Informatica"> Informatica</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to="/category/Deportes"> Deportes</Link></NavDropdown.Item>
                     <NavDropdown.Item ><Link to="/category/jewelery"> Jewlery</Link></NavDropdown.Item>
 
                   </NavDropdown>

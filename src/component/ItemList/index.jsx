@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
+
 import Item from '../Item';
-import Modal from '../Modal';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 import './style.css';
 
 const ItemList = ({products}) => {
 
-  const [modalShow, setModalShow] = useState(true);
+
 
   return (
     <div className='ItemCard'>
@@ -15,7 +16,9 @@ const ItemList = ({products}) => {
         :
         <h2>Loading...</h2>
       }
-      { modalShow ? <Modal handleClose={setModalShow}/> : null}
+      : <Box sx={{ width: '100%' }}>
+          <LinearProgress />
+        </Box>}
     </div>
   )
 }

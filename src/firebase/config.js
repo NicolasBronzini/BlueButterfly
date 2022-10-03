@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCOfaduBONXBLzcsoKpKZ_lm3HEu1bHFFc",
-  authDomain: "BlueButterfly.firebaseapp.com",
-  projectId: "BlueButterfly",
-  storageBucket: "BlueButterfly.appspot.com",
-  messagingSenderId: "181780046651",
-  appId: "1:181780046651:web:6ac50855b50fe1ad524d1e"
+  apiKey: "AIzaSyDKAKrmIrBJrzEW0u7ogcH5qSyqbFe9C2c",
+  authDomain: "bluebutterfly-2e50b.firebaseapp.com",
+  projectId: "bluebutterfly-2e50b",
+  storageBucket: "bluebutterfly-2e50b.appspot.com",
+  messagingSenderId: "34853977626",
+  appId: "1:34853977626:web:600818cab471cfe1a29ba3"
 };
 
 // Initialize Firebase
