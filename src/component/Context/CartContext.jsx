@@ -43,17 +43,19 @@ const CartContext = ({children}) => {
   const clearCart = () => {
       setCart([]);
   }
-  // const totalPrice = () => {
-  //   return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
-  // } 
+   //funcion para sumar la cantidad en el carrito
+  const totalPrice = () => {
+    return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
+  } 
 
-  
-  // const totalProducts = () => {
-  //   return cart.reduce((prev, act) => prev + act.quantity, 0);
-  // }
+  //funcion para obtener el total de productos en el carrito
+  const totalProducts = () => {
+    return cart.reduce((prev, act) => prev + act.quantity, 0);
+  }
+
 
   return (
-    <Shop.Provider value={{cart, addItem, removeItem, clearCart}}>
+    <Shop.Provider value={{cart, addItem, removeItem, clearCart, totalPrice, totalProducts}}>
       {children}
     </Shop.Provider>
   );

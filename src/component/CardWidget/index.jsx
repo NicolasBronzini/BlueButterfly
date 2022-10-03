@@ -1,15 +1,21 @@
 import React from 'react';
 import carrito from '../assets/carrito.png'
-import './style.css'
-
+import {Shop} from '../Context/CartContext';
+import {useContext} from 'react';
 const CartWidget = () => {
   return (
-    <>
+    
     <div style={{ position: 'absolute',right: '80px',  top: '5px',}}>
+           
         <img src={carrito} alt="carrito de compras" />
+
+        {totalProducts() !== 0 ? 
+        <div >
+             {totalProducts()}
+          </div> : ""}
     </div>
 
-    </>
+    
   )
 }
 
