@@ -3,7 +3,7 @@ import ItemCart from '../ItemCart';
 import { Shop } from '../Context/CartContext';
 import CartTotals from '../CartTotals'
 import './style.css';
-
+import { Link } from 'react-router-dom';
 const CartContainer = () => {
 
 
@@ -22,15 +22,19 @@ const CartContainer = () => {
     <>
     <div  className='container' >
       <section>
-        
-        {cart.map(product => {
+      {!cart.length 
+        ? <div className="noneProducts">
+            <p>No hay productos en el carrito</p>
+            <Link to="/"><button>Volver al catalogo</button></Link>
+          </div>
+
+        : cart.map(product => {
           return <ItemCart key={product.id} product={product}/>
         })}
         <button onClick={clearCart} className='btnClear'> Clear</button>
-      </section>
-      <aside >
         <CartTotals/>
-      </aside>
+      </section>
+      
       
     </div>
     </>

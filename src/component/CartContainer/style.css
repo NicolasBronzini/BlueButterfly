@@ -12,3 +12,14 @@
     top:70px;
     right: 150px;
 }
+.noneProducts{
+    text-align: center;
+    height: 700px;
+}
+.noneProducts button{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+
+}

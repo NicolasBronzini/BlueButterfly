@@ -43,7 +43,7 @@ function OffcanvasExample() {
                     <NavDropdown.Item > <Link to="/category/Electrodomesticos"> Electrodomesticos</Link></NavDropdown.Item>
                     <NavDropdown.Item ><Link to="/category/Informatica"> Informatica</Link></NavDropdown.Item>
                     <NavDropdown.Item ><Link to="/category/Deportes"> Deportes</Link></NavDropdown.Item>
-                    <NavDropdown.Item ><Link to="/category/jewelery"> Jewlery</Link></NavDropdown.Item>
+                    {/* <NavDropdown.Item ><Link to="/category/jewelery"> Jewlery</Link></NavDropdown.Item> */}
 
                   </NavDropdown>
                    

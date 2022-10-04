@@ -11,14 +11,14 @@ const CartWidget = () => {
            
         <img src={carrito} alt="carrito de compras" />
 
-        {totalProducts() !== 0 ? 
+        {totalProducts() !== 0 && 
         <div>
              {totalProducts()}
-          </div> : ""}
+          </div> }
     </div>
 
     
   )
 }
 
-export default CartWidget
+export default CartWidget;

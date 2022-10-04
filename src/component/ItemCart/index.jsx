@@ -29,6 +29,7 @@ const ItemCart = ({product}) => {
       <dl>
         <button onClick={()=> removeItem(product)}  className='btn-quitar'><FaTimes /></button>
       </dl>
+      
     </div>
   )
 }
